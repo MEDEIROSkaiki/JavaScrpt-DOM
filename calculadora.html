@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+let nome = prompt("Digite seu nome: ");
+let num1 = Number(prompt("Digite a nota 1: "));
+let num2 = Number(prompt("Digite a nota 2: "));
+let num3 = Number(prompt("Digite a nota 3: "));
+let faltas = parseFloat(prompt("Digite a porcentagem de faltas: "));
+let media = (num1 + num2 + num3) / 3;
+let resultado;
+
+if (media>= 7 && faltas < 25) {
+    resultado = "Aprovado";
+} else if (media >= 5 && media < 7 && faltas <25) {
+    resultado = "Recuperação";
+} else {
+  resultado = "Reprovado";
+}
+
+alert(`${nome} - Média: ${media.toFixed(2)} - Faltas: ${faltas}% - Resultado: ${resultado}`);
+
+
+
+</script>
+
+</body>
+</html>

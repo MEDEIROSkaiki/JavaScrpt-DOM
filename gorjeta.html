@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+function calcugor(){
+let valorc = parseFloat(prompt("Digite o valor da conta: "));
+
+if (isNaN(valorc) || valorc < 0) {
+    alert("Insira um valor valido");
+    return;
+}
+
+let satis = prompt("Qual seu nível de satisfação? (bom, ótimo, excelente)");
+
+let porc;
+ if (satis === "Bom") {
+    porc = 0.10;
+ } else if (satis === "otimo") {
+    porc = 0.15;
+ } else if (satis === "Exelente") {
+    porc = 0.20;
+ } else {
+    alert("Escolha entre 'Bom', 'Otimo' ou 'Exelente'.");
+    return;
+ }
+ 
+ let gor = valorc * porc;
+
+ let total = gor + valorc;
+
+ alert(`Valor da conta: R$ ${valorc.toFixed(2)}\n` +
+       `Gorjeta (${satis}): R$ ${gor.toFixed(2)}\n` +
+       `Total a pagar: R$ ${total.toFixed(2)}`);
+}
+
+calcugor();
+</script>
+
+</body>
+</html>
