@@ -28,7 +28,6 @@ nav a{
 }
 
 nav a:hover{
-    background-color: #ff7e5f;
     transform: scale(1.1);
 }
 
